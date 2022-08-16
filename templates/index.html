@@ -1,0 +1,67 @@
+<!DOCTPYE <html>
+<html lang="en">
+  <head>
+    <title>To Do List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/main.css') }}">
+    
+  </head>
+  <body>
+    
+    <div class="header">
+      <h2>To Do List</h2>
+      <ol id="listOfTasks">
+        <!-- All quotes will be displayed here -->
+      </ol>
+    </div>
+
+    <div class="container">
+      
+      <div class="child">
+        <h2>Selected Task</h2>
+        <br>
+        <label for="selectedId">ID:</label>
+        <input type="text" id="selectedId" disabled>
+        <br>
+        <label for="selectedTask">Task:</label>
+        <input type="text" id="selectedTask">
+        <br>
+        <label for="selectedStatus">Status:</label>
+        <select id="selectedStatus">
+          <option value="" disabled selected hidden>Choose a status</option>
+          <option value="ongoing">ongoing</option>
+          <option value="pending">pending</option>
+          <option value="completed">completed</option>
+        </select>
+        <br>
+        <!-- Selected quotes will be displayed here -->
+        <input type="button" value="Edit Task" id="editBtn">
+        <br>
+        <input type="button" value="Remove Task" id="deleteBtn">
+      </div>
+    
+      <div class="child">
+        <h2>Add New Task</h2>
+        <br>
+        <label for="newTask">Task:</label>
+        <input type ="text" id="newTask">
+        <br>
+        <label for="newStatus">Status:</label>
+        <select id="newStatus">
+          <option value="" disabled selected hidden>Choose a status</option>
+          <option value="ongoing">ongoing</option>
+          <option value="pending">pending</option>
+          <option value="completed">completed</option>
+        </select>
+        <br>
+        <input type="button"  value="Add Task" id="newTaskBtn">
+      </div>
+      
+    </div>
+    
+    <script src="/static/scripts/script.js"></script> 
+    
+  </body>
+</html>
